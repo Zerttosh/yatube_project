@@ -1,0 +1,140 @@
+<!DOCTYPE html>    <!-- Это информация для браузера: «Страница написана на HTML5!» -->
+<html>
+    <head>    <!-- Здесь служебная информация, она не видна пользователю -->
+        <meta charset="utf-8">    <!-- На странице используется кодировка utf-8 -->
+        <meta name="description" content="Краткое описание страницы">    <!-- Краткий анонс страницы -->
+        <link rel="stylesheet" href="css/style.css">    <!-- Подключаем стилевой файл -->
+        <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" 
+        crossorigin="anonymous">    <!-- Подключаем booststrap с сервера-->
+        <title>Заголовок для отображения в названии вкладки</title>    <!-- Этот заголовок будет показан как название вкладки браузера -->
+        <link rel="icon" href="fav.ico" type="image">    <!-- Иконка сайта, будет показана на вкладке браузера -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <meta name="viewport" content="width=device-width, initial-scale=1">    <!-- Для работы booststrap -->
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <style>
+            body {
+                background: blue;
+            }
+            
+            .nav-item {
+                display: inline-block; 
+                font-size: 20px; 
+                font-family: sans-serif;
+            }
+            
+            #top-nav {
+                background: red;
+            }
+
+            header *{
+
+            }
+
+            p.negative {
+
+            }
+
+            div#footer-inner {
+                
+            }
+        </style>
+    </head>
+  
+    <body>    <!-- Здесь содержимое страницы, видимое пользователю -->
+        
+        <header> <!--Верхний колонтитул-->
+            Верхняя часть страницы: логотип, контакты
+
+            <nav style="background: red;">Меню (навигация)
+                <ul>
+                    <li style="display: inline-block; font-size: 20px; font-family: sans-serif;">
+                        <a href="/">Главная страница</a>
+                    </li>
+                    
+                    <li style="display: inline-block; font-size: 20px; font-family: sans-serif;">
+                        <a href="/">О сайте</a>
+                    </li>
+                    
+                    <li style="display: inline-block; font-size: 20px; font-family: sans-serif;">
+                        <a href="/">Контакты</a>
+                    </li>
+                    
+                    <li style="display: inline-block; font-size: 20px; font-family: sans-serif;">
+                        <a href="/">Каталог</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav style="background: red;">Меню (навигация)
+                <ol>
+                    <li class="nav-item active">
+                        <a href="/">Главная страница</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="/">Главная страница</a>
+                    </li>
+
+                    <li id="top-nav">
+                        <a href="/">Главная страница</a>
+                    </li>
+
+                    <li>
+                        <a href="/">Главная страница</a>
+                    </li>
+                </ol>
+            </nav>
+        
+        </header>
+        
+        
+        <main>Основное содержимое страницы <!--Основная часть страницы-->
+            <section> Раздел    <!--Раздел-->
+                <article>Cтатья 1   <!--Статья в разделе-->
+                    <div></div>   <!--Смысловой блок-->
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </article>
+            
+                <article>Cтатья 2
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </article>
+            
+                <article>Cтатья 3
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </article>
+                
+                <article>Cтатья 4
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </article>
+            </section>
+        </main>
+        
+        <aside> <!--Дополнительная информация, косвенно связанная с основным содержимым страницы-->
+
+        </aside>
+
+        <footer>    <!--Нижний колонтитул-->
+        Подвал
+        </footer>
+    
+    </body>
+
+</html>

@@ -1,0 +1,36 @@
+.nav-item {
+    display: inline-block; 
+    font-size: 20px; 
+    font-family: sans-serif;
+}
+
+#top-nav {
+    background: rgb(69, 143, 47);
+}
+
+body {
+    background: blue;
+}
+
+footer, #top-nav {
+    background: red;
+}
+
+.nav-item {
+    display: inline-block;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.active a {
+    color: white;
+}
+
+.negative {
+    color: white;
+    background: black;
+}
+
+#footer-inner {
+    font-size: 30px;
+} 
