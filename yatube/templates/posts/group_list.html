@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+    {% block title %}
+        {{ title }}
+    {% endblock %}
+
+    {% block content %}
+        {% if text == 'Главная страница' %}
+            Вы на главной странице.
+        {% elif text == 'Вложенная страница' %}
+            Вы в одном клике от главной страницы!
+        {% else %}
+            Мы понятия не имеем, где вы!
+        {% endif %} 
+    {% endblock%}
