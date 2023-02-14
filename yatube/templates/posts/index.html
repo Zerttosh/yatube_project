@@ -4,15 +4,40 @@
     {% endblock %}
 
     {% block content %}
-        {{ text|length }}
-        {{ 'LOLOLO'|length }}
-        {{ LOLOLO|length }}
-        <h1>{{ text }}</h1>
-        Стихотворение
-        {{ poem|safe|linebreaksbr}}
-        {{ pub_date|date:"j.m.Y" }} {# выведет 2.02.2020 #} 
-        {% comment %} {{ pub_date|date:"j F Y" }} {# выведет 2 Февраля 2020 #}
-        {{ pub_date|date:"d.m.y" }} {# выведет 02.02.20 #}
-        {{ pub_date|date:"d M Y" }} {# выведет 02 Фев 2020 #}
-        {{ post.pub_date|date:"d E Y" }} {# выведет 2 февраля 2020 #}  {% endcomment %}
+        {% comment %}
+            {{ text|length }}
+            {{ 'LOLOLO'|length }}
+            {{ LOLOLO|length }}
+            <h1>{{ text }}</h1>
+            Стихотворение
+            {{ poem|safe|linebreaksbr}}
+            {{ pub_date|date:"j.m.Y" }} {# выведет 2.02.2020 #} 
+            {{ pub_date|date:"j F Y" }} {# выведет 2 Февраля 2020 #}
+            {{ pub_date|date:"d.m.y" }} {# выведет 02.02.20 #}
+            {{ pub_date|date:"d M Y" }} {# выведет 02 Фев 2020 #}
+            {{ post.pub_date|date:"d E Y" }} {# выведет 2 февраля 2020 #}
+        {% endcomment %}
+        
+        {% for post in posts %}
+            <ul>
+                <li>
+                Автор: {{ post.author.get_full_name }}
+                </li>
+                <li>
+                Дата публикации: {{ post.pub_date|date:"d E Y" }}
+                </li>
+            </ul>
+            <p>{{ post.text }}</p>    
+            {% if post.group %}   
+                <p>
+                    <a href="{% url 'posts:group_list' post.group.slug %}">
+                        все записи группы: {{post.group.title}}
+                    </a>
+                </p>
+            {% endif %} 
+            
+            {% if not forloop.last %} <hr> {% endif %}
+        
+        {% endfor %} 
+    
     {% endblock%}
